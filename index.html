@@ -6,10 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
-        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet/less" type="text/css" href="styles/main.less"/>
     </head>
     <body>
-      <!-- <nav>
+      <nav>
         <div class="nav-wrapper">
           <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
           <ul class="right hide-on-med-and-down">
@@ -25,24 +25,61 @@
             <li><a href="mobile.html">Mobile</a></li>
           </ul>
         </div>
-      </nav> -->
+      </nav>
       <div class="page-container">
         <div class="slide-1">
           <div id="main-backdrop"></div>
           <div id="main-cover">
             <div class="content-container main-wrapper center-align">
-                <h1>ERIC ZIJING LIN</h1>
+                <h1 class="font-slim">ERIC ZIJING LIN</h1>
                 <hr/>
-                <h4>A software engineering student from University of Waterloo</h4>
+                <h4 class="font-stick">A software engineering student from University of Waterloo</h4>
             </div>
           </div>
         </div>
         <div class="slide-2" style="height: 800px">
-          asdasdads
+          <div class="slide-padding">
+            <h2 class="center-align font-slim">Profile</h2>
+            <div class="row">
+              <div class="col s5">
+                <div class="center-align">
+                  <img class="crop-image" src="images/eric-profile-square.jpg"/>
+                </div>
+                <div>
+                  <p><i>"The measure of who we are is what we do with what we have." - Vince Lombardi</i></p>
+                  <p>
+                    Hi there! My name is <b>Eric Lin</b>! I am a software developer based in <a href="https://www.google.ca/maps/place/University+of+Waterloo/@43.4749848,-80.5523327,14z">Waterloo, Ontario</a>. I love gaming, coding and dogs. Well, mostly dogs.
+
+                   <!--  My passion for gaming and programming lead me to study software engineering at University of Waterloo. I am a fourth year student now and I have gained considerable experience in software engineering over the last few internships. -->
+                  </p>
+                </div>
+                <div>
+                  <div class="side-tabs">
+                    <div class="side-tab"><a href="#about-me" class="active" tab-index="0">About Me</a></div>
+                    <div class="side-tab"><a href="#gaming" tab-index="1">Gaming Proficiency</a></div>
+                    <div class="side-tab"><a href="#experience" tab-index="2">Past Experience</a></div>
+                    <div class="side-tab"><a href="#puppies" tab-index="3">Puppies</a></div>
+                    <div class="indicator-cover top"></div>
+                    <div class="vertical-indicator"></div>
+                    <div class="indicator-cover bottom"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s7">
+                <div class="tabs-contents">
+                  <div class="panel fade active in" id="about-me"> test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1</div>
+                  <div class="panel fade" id="gaming"> test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2 test2</div>
+                  <div class="panel fade" id="experience"> test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3 test3</div>
+                  <div class="panel fade" id="puppies"> test4 test4 test4 test4 test4 test4 test4 test4 test4 test4 test4 test4 test4 test4 test4 test4 test4 test4 test4 test4 test4 test4 test4 test4 test4 test4 test4 test4 test4 test4 test4 test4 test4 test4 test4 test4</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
       <script src="scripts/main.js"></script>
     </body>
 </html>
