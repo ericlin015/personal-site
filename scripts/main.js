@@ -332,7 +332,6 @@ var viewPortHeight = $(window).height(),
     loadGalleryPhotos();
     initHoverDir();
     initPhotoViewer();
-    // loadGalleryPhotos();
   };
 
   init();

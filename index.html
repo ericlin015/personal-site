@@ -5,6 +5,7 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
         <link rel="stylesheet" href="libs/photoSwipe/photoswipe.css">
         <link rel="stylesheet" href="libs/photoSwipe/default-skin/default-skin.css">
@@ -196,14 +197,90 @@
                 <h2 class="font-slim">Gallery</h2>
                 <p>Explore while you can. Capture the beauty of this world.</p>
               </div>
-              <div id="gallery-photos">
+              <div id="gallery-photos"></div>
+            </div>
+          </div>
+        </div>
 
+        <div id="contact">
+          <div class="slide-padding">
+            <div class="slide-header center-align">
+              <h2 class="font-slim">Contact Me</h2>
+              <p class="center-align">What's on your mind? Hiring? playing games? Hopefully not spamming.</p>
+            </div>
+            <div class="row">
+              <div class="col s12 m8">
+                <form>
+                  <div class="row">
+                    <div class="col s12"><h5>Get in touch</h5></div>
+                    <div class="input-field col s12">
+                      <input id="first_name" type="text" class="validate">
+                      <label for="first_name">Your Name</label>
+                    </div>
+                    <div class="input-field col s12">
+                      <input id="first_name" type="text" class="validate">
+                      <label for="first_name">Your Email Address</label>
+                    </div>
+                    <div class="input-field col s12">
+                      <textarea id="textarea1" class="materialize-textarea"></textarea>
+                      <label for="textarea1">Textarea</label>
+                    </div>
+                    <div class="col s12">
+                      <button class="btn waves-effect waves-light" id="message-submit" type="submit">Submit
+                        <i class="mdi-content-send right"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
               </div>
+              <div class="col s12 m4">
+                <div style="padding: 0 0.75rem">
+                  <h5>Connect with me</h5>
+                  <div class="social-container facebook">
+                    <a href="https://www.facebook.com/ericlin815" target="_blank">
+                      <i class="fa fa-facebook-square"></i>
+                      <span>ericlin815</span>
+                    </a>
+                  </div>
+                  <div class="social-container email">
+                    <a href="mailto:me@erlin.ca?Subject=Just%20Checked%20Out%20Your%20Site">
+                      <i class="fa fa-envelope-o"></i>
+                      <span>me@erlin.ca</span>
+                    </a>
+                  </div>
+                  <div class="social-container twitter">
+                    <a href="https://twitter.com/Eracnin" target="_blank">
+                      <i class="fa fa-twitter-square"></i>
+                      <span>@Eracnin</span>
+                    </a>
+                  </div>
+                  <div class="social-container github">
+                    <a href="https://github.com/tinyjing" target="_blank">
+                      <i class="fa fa-github"></i>
+                      <span>tinyjing</span>
+                    </a>
+                  </div>
+                  <div class="social-container instagram">
+                    <a href="https://instagram.com/ericlin15" target="_blank">
+                      <i class="fa fa-instagram"></i>
+                      <span>ericlin15</span>
+                    </a>
+                  </div>
+                  <div class="social-container linkedin">
+                    <a href="https://ca.linkedin.com/in/ericlin15" target="_blank">
+                    <i class="fa fa-linkedin-square"></i>
+                      <span>ericlin15</span>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
+        </div>
       </div>
+
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
