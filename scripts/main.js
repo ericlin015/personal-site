@@ -73,7 +73,7 @@ var viewPortHeight = $(window).height(),
 
 (function smoothScrolling() {
 
-  $('a[href*=#]:not([href=#])').click(function() {
+  $('nav ul a').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
         && location.hostname == this.hostname) {
       var target = $(this.hash);

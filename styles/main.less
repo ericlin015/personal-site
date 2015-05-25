@@ -28,6 +28,8 @@ nav ul a {
   }
   p {
     margin-top: -10px;
+    font-weight: 300;
+    font-size: 16px;
   }
 }
 
@@ -264,5 +266,28 @@ h5 {
 @media(max-width: 600px) {
   .responsive-text {
     display: none;
+  }
+}
+
+#gallery {
+  position: relative;
+  #gallery-backdrop {
+    width: 100%;
+    opacity: 0.4;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  #gallery-cover {
+    background-image: url("../images/gallery-cover.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    .slide-padding {
+      position: relative;
+    }
   }
 }
