@@ -465,3 +465,53 @@ var viewPortHeight = $(window).height(),
 
 })();
 
+var fadeInCards = function() {
+  var delay = 0;
+  $('#about-me .card').each(function() {
+    $(this).delay(delay).animate({left: 0});
+    delay += 150;
+  })
+};
+
+var fadeInProfile = function() {
+  $('.profile').eq(0).animate({
+    opacity: 1
+  });
+};
+
+var fadeInGallery = function() {
+  var delay = 0;
+  $('.photo-wrapper').each(function() {
+    $(this).delay(delay).animate({opacity: 1});
+    delay += 75;
+  })
+};
+
+(function scrollFire() {
+
+  var fadeMainTitles = function() {
+    var delay = 0;
+    $('#main-cover .content-container').children().each(function() {
+      $(this).delay(delay).animate({opacity: 1});
+      delay += 100;
+    })
+  };
+
+  var options = [{
+    selector: '.panel.active',
+    offset: 400,
+    callback: 'fadeInCards()'
+  }, {
+    selector: '.profile',
+    offset: 200,
+    callback: 'fadeInProfile()'
+  }, {
+    selector: '#gallery-photos',
+    offset: 200,
+    callback: 'fadeInGallery()'
+  }];
+  Materialize.scrollFire(options);
+  $(document).ready(function() {
+    fadeMainTitles();
+  })
+})();
