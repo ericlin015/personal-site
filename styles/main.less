@@ -233,8 +233,11 @@ h5 {
   transition: all 250ms linear;
 }
 
-#about-me > * {
-  left: 200%;
+#about-me {
+  overflow: hidden;
+  & > * {
+    left: 110%;
+  }
 }
 
 .profile {
@@ -295,7 +298,7 @@ h5 {
   #gallery-cover {
     background-image: url("../images/gallery-cover.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
     background-position: center center;
     .slide-padding {
       position: relative;
@@ -361,6 +364,10 @@ h5 {
 
 .social-container {
   padding: 5px;
+  -webkit-transition: all 250ms linear;
+  -moz-transition: all 250ms linear;
+  -o-transition: all 250ms linear;
+  transition: all 250ms linear;
   i {
     font-size: 2.5em;
     vertical-align: middle;
@@ -378,6 +385,7 @@ h5 {
     transition: all 250ms linear;
   }
   &:hover {
+    padding-left: 30px;
     i {
       color: #fff;
     }

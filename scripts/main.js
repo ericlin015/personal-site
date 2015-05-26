@@ -1,5 +1,4 @@
 var viewPortHeight = $(window).height(),
-  hashTagActive = '',
   imagesDescription = [{
     title: 'Chinese New Year',
     location: 'Seattle, WA',
@@ -470,7 +469,7 @@ var fadeInCards = function() {
   $('#about-me .card').each(function() {
     $(this).delay(delay).animate({left: 0});
     delay += 150;
-  })
+  });
 };
 
 var fadeInProfile = function() {
@@ -490,11 +489,11 @@ var fadeInGallery = function() {
 (function scrollFire() {
 
   var fadeMainTitles = function() {
-    var delay = 0;
+    var delayTime = 350;
     $('#main-cover .content-container').children().each(function() {
-      $(this).delay(delay).animate({opacity: 1});
-      delay += 100;
-    })
+      $(this).delay(delayTime).animate({opacity: 1}, 1000, 'easeInOutQuart');
+      delayTime += 250;
+    });
   };
 
   var options = [{
@@ -510,8 +509,16 @@ var fadeInGallery = function() {
     offset: 200,
     callback: 'fadeInGallery()'
   }];
-  Materialize.scrollFire(options);
+
   $(document).ready(function() {
+    Materialize.scrollFire(options);
+  });
+
+  $(window).load(function() {
+    $('.loading-screen').eq(0).addClass('hidden');
+    $('.page-container').eq(0).addClass('active');
     fadeMainTitles();
-  })
+    $(window).scrollTop($(window).scrollTop() + 1);
+  });
+
 })();

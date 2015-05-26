@@ -5,6 +5,130 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <style type="text/css">
+          .page-container {
+            opacity: 0;
+          }
+          .page-container.active {
+            opacity: 1;
+          }
+          .loading-screen {
+            position: fixed;
+            z-index: 99999;
+            background-color: #806443;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+          }
+          .loading-screen.hidden {
+            display: none;
+          }
+          #loader{
+            flex-direction:row;
+            -webkit-flex-direction:row;
+            -ms-flex-direction:row;
+            -mos-flex-direction:row;
+            -o-flex-direction:row;
+            justify-content:center;
+            -webkit-justify-content:center;
+            -ms-justify-content:center;
+            height:100%;
+            width:100%;
+            background-color:#806443;
+          }
+          .letter{
+              font-size:100px;
+              color:#222;
+              font-family:tahoma;
+          }
+          .box{
+              display: box;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+          }
+          .loaderCircle, .loaderInner, .loaderCore{
+               border-radius:50%;
+              -webkit-border-radius:50%;
+              -moz-border-radius:50%;
+              -ms-border-radius:50%;
+          }
+          .loader, .letter, .loaderCircle, .loaderInner, .loaderCore{
+              flex:none;
+              -webkit-flex:none;
+              -moz-flex:none;
+              -ms-flex:none;
+              -o-flex:none;
+          }
+          .letter, .loaderCircle{
+              align-self:center;
+              -webkit-align-self:center;
+              -moz-align-self:center;
+              -o-align-self:center;
+              -ms-align-self:center;
+          }
+          .loaderCircle{
+              align-items:center;
+              -ms-align-items:center;
+              justify-content:center;
+              -ms-justify-content:center;
+              height:100px;
+              width:100px;
+              background-color:#222;
+          }
+          .loaderInner{
+              align-self:center;
+              -ms-align-self:center;
+              justify-content:center;
+              -ms-justify-content:center;
+              height:50%;
+              width:50%;
+              background-color:#806443;
+              -webkit-animation-name:loaderAnimate;
+              -webkit-animation-duration:500ms;
+              -webkit-animation-direction:alternate;
+              -webkit-animation-timing-function:ease-in-out;
+              -webkit-animation-iteration-count:infinite;
+          }
+          .loaderCore{
+              align-self:center;
+              -ms-align-self:center;
+              height:25%;
+              width:25%;
+              background-color:#222;
+              -webkit-animation-name:coreAnimate;
+              -webkit-animation-duration:1s;
+              -webkit-animation-direction:alternate;
+              -webkit-animation-timing-function:ease-in-out;
+              -webkit-animation-iteration-count:infinite;
+          }
+          @-webkit-keyframes loaderAnimate{
+                  to{ height:90%; width:90%; }
+          }
+          @keyframes loaderAnimate{
+              to{ height:90%; width:90%; }
+          }
+
+          @-webkit-keyframes coreAnimate{
+              to{ height:90%; width:90%; }
+          }
+          @keyframes coreAnimate{
+              to{ height:90%; width:90%; }
+          }
+          @media(max-width: 600px) {
+            .letter {
+              font-size: 50px
+            }
+            .loaderCircle {
+              width: 50px;
+              height: 50px;
+            }
+          }
+        </style>
+
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
         <link rel="stylesheet" href="libs/photoSwipe/photoswipe.css">
@@ -13,30 +137,47 @@
     </head>
     <body>
 
-      <nav>
-        <div class="nav-wrapper">
-          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-          <ul class="right hide-on-med-and-down" style="margin-right: 60px">
-            <li><a href="#home">HOME</a></li>
-            <li><a href="#profile">PROFILE</a></li>
-            <li><a href="#gallery">GALLERY</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-          </ul>
-          <ul class="side-nav" id="mobile-demo">
-            <li><a href="#home">HOME</a></li>
-            <li><a href="#profile">PROFILE</a></li>
-            <li><a href="#gallery">GALLERY</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-          </ul>
+      <div class="loading-screen">
+        <div id = "loader" class = "box">
+            <span class = "letter">L</span>
+
+            <div class = "loaderCircle box">
+                <div class = "loaderInner box">
+                    <div class = "loaderCore box"></div>
+                </div></div>
+
+            <span class = "letter box">A</span>
+            <span class = "letter box">D</span>
+            <span class = "letter box">I</span>
+            <span class = "letter box">N</span>
+            <span class = "letter box">G</span>
         </div>
-      </nav>
+      </div>
 
       <div class="page-container">
+        <nav>
+          <div class="nav-wrapper">
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+            <ul class="right hide-on-med-and-down" style="margin-right: 60px">
+              <li><a href="#home">HOME</a></li>
+              <li><a href="#profile">PROFILE</a></li>
+              <li><a href="#gallery">GALLERY</a></li>
+              <li><a href="#contact">CONTACT</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+              <li><a href="#home">HOME</a></li>
+              <li><a href="#profile">PROFILE</a></li>
+              <li><a href="#gallery">GALLERY</a></li>
+              <li><a href="#contact">CONTACT</a></li>
+            </ul>
+          </div>
+        </nav>
+
         <div class="slide-1" id="home">
           <div id="main-backdrop"></div>
           <div id="main-cover">
             <div class="content-container main-wrapper center-align">
-                <h1 class="font-slim">ERIC ZIJING LIN</h1>
+                <h1 class="font-slim">ERIC<span class="responsive-text"> ZIJING</span> LIN</h1>
                 <hr/>
                 <h4 class="font-stick">A software engineering student from University of Waterloo</h4>
             </div>
@@ -223,7 +364,7 @@
                     </div>
                     <div class="input-field col s12">
                       <textarea id="textarea1" class="materialize-textarea"></textarea>
-                      <label for="textarea1">Textarea</label>
+                      <label for="textarea1">Comments</label>
                     </div>
                     <div class="col s12">
                       <button class="btn waves-effect waves-light" id="message-submit" type="submit">Submit
